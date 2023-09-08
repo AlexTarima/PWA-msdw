@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Fish Creek Animal Clinic Services</title>
+<meta charset="utf-8">
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link href="css/fishcreek.css" rel="stylesheet">
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.ready.then(reg => {
+                console.log(`Service Worker ready (Scope: ${reg.scope})`)
+
+            });
+            navigator.serviceWorker.register('./sw.js')
+                .then(function (reg) {
+                    console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+                })
+                .catch(function (error) {
+
+                    console.log(`Service Worker Error (${error})`);
+                });
+        } else {
+
+            console.warn('Service Worker not available');
+        }
+    </script>
+
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <h1>Fish Creek Animal Clinic</h1>
+  </header>
+  <nav>
+    <a href="index.html"><img src="images/home.gif" alt="Home" width="132" height="27"></a> &nbsp; 
+    <a href="services.html"><img src="images/services.gif" alt="Services" width="132" height="27"></a> &nbsp; 
+    <a href="askvet.html"><img src="images/askthevet.gif" alt="Ask the Vet" width="132" height="27"></a> &nbsp; 
+  </nav>
+  <main>
+    <h2>Professional Services</h2>
+    <ul>
+      <li><span class="category">Medical Services</span><br>
+Our facility has state-of-the-art equipment and technology.</li>
+      <li><span class="category">Surgical Services</span><br>
+We offer a full range of surgical procedures including orthopedics and emergency surgeries.</li>
+      <li><span class="category">Dental Care</span><br>
+A dental exam can determine whether your pet needs preventive dental care such as scaling and polishing.</li>
+      <li><span class="category">House Calls</span><br>
+The elderly, physically challenged, and multiple pet households often find our in-home veterinary service helpful and convenient.</li>
+      <li><span class="category">Emergencies</span><br>
+You can reach us at any time. At least one of our doctors is on call every day and night.</li>
+    </ul>
+  </main>
+  <footer>
+   <nav>
+    <a href="index.html">Home</a> &nbsp; 
+    <a href="services.html">Services</a> &nbsp; 
+    <a href="askvet.html">Ask the Vet</a> &nbsp; 
+  </nav>
+Copyright &copy; 2020 Fish Creek Animal Clinic
+  </footer>
+</div>
+</body>
+</html>

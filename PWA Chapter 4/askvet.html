@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Fish Creek Animal Clinic: Ask the Vet</title>
+<meta charset="utf-8">
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link href="css/fishcreek.css" rel="stylesheet">
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.ready.then(reg => {
+                console.log(`Service Worker ready (Scope: ${reg.scope})`)
+
+            });
+            navigator.serviceWorker.register('./sw.js')
+                .then(function (reg) {
+                    console.log(`Service Worker Registration (Scope: ${reg.scope})`);
+                })
+                .catch(function (error) {
+
+                    console.log(`Service Worker Error (${error})`);
+                });
+        } else {
+
+            console.warn('Service Worker not available');
+        }
+    </script>
+
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <h1>Fish Creek Animal Clinic</h1>
+  </header>
+  <nav>
+    <a href="index.html"><img src="images/home.gif" alt="Home" width="132" height="27"></a> &nbsp; 
+    <a href="services.html"><img src="images/services.gif" alt="Services" width="132" height="27"></a> &nbsp; 
+    <a href="askvet.html"><img src="images/askthevet.gif" alt="Ask the Vet" width="132" height="27"></a> &nbsp; 
+  </nav>
+  <main>
+    <h2>Ask the Vet</h2>
+    <p>Contact us if you have a question that you would like answered here.</p>
+	<dl>
+	  <dt>Our dog, Sparky, likes to eat whatever the kids are snacking on. Is it OK for the dog to each chocolate?</dt>
+	  <dd>Chocolate is toxic to dogs. Please do not feed your dog chocolate. Try
+playing a game with your children &mdash; when you feed them people treats, they
+can feed Sparky dog treats.</dd>
+    </dl>
+  </main>
+  <footer>
+   <nav>
+    <a href="index.html">Home</a> &nbsp; 
+    <a href="services.html">Services</a> &nbsp; 
+    <a href="askvet.html">Ask the Vet</a> &nbsp; 
+  </nav>
+Copyright &copy; 2020 Fish Creek Animal Clinic
+  </footer>
+</div>
+</body>
+</html>
